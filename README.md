@@ -33,15 +33,15 @@ The app declares a `<queries>` entry for `android.intent.action.TTS_SERVICE` in 
 
 ## Building
 
-The project has no Gradle wrapper. It was built with:
+The project uses the Gradle wrapper (`./gradlew`), which downloads Gradle 8.7 on first run. It was built with:
 
-- **Gradle 8.7** (installed at `~/tools/gradle-8.7`)
+- **Gradle 8.7**
 - **Android Gradle Plugin 8.5.2**, **Kotlin 1.9.24**, **JDK 17+**
-- Android SDK at `/home/moses/Android/Sdk` (configured via `local.properties`)
+- The Android SDK (configured via `local.properties`)
 
 ```bash
 # from the project root
-~/tools/gradle-8.7/bin/gradle :app:assembleDebug
+./gradlew :app:assembleDebug
 ```
 
 The APK is written to `app/build/outputs/apk/debug/EpubReader.apk`.
