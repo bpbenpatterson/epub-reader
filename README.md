@@ -88,3 +88,7 @@ app/src/main/
 - `MainActivity` opens/picks an EPUB, `EpubParser` extracts chapters, and the book is handed to `TtsService` via a static `BookHolder`.
 - `TtsService` runs as a foreground service with a media session + notification. It splits each chapter into sentences and speaks them one at a time through the system TTS engine, tracking position as it goes.
 - The UI polls the service (once per second) to keep the chapter progress slider and sleep-timer countdown in sync.
+
+## How this was built
+
+Built with LLM coding agents as part of the workflow — scaffolding, refactoring, debugging, and test generation — with every change reviewed against the build, the tests, and observed device or browser behavior before it landed. The architecture decisions, the debugging, and the calls about what shipped were mine.
